@@ -26,7 +26,7 @@ function ChatWindow() {
         };
 
         try {
-            const response = await fetch("http://localhost:8080/api/chat", options);
+            const response = await fetch("http://ec2-13-201-71-12.ap-south-1.compute.amazonaws.com:8080/api/chat", options);
             const res = await response.json();
             console.log(res);
             setReply(res.reply);
@@ -91,7 +91,7 @@ function ChatWindow() {
                     <div id="submit" onClick={getReply}><i className="fa-solid fa-paper-plane"></i></div>
                 </div>
                 <p className="info">
-                    SigmaGPT can make mistakes. Check important info. See Cookie Preferences.
+                    CortexGPT can make mistakes. Check important info. See Cookie Preferences.
                 </p>
             </div>
         </div>
